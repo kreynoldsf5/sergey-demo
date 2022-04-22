@@ -30,7 +30,7 @@ resource "volterra_app_firewall" "af" {
   use_default_blocking_page = true
   default_bot_setting = true
   default_detection_settings = true
-  blocking = false
+  blocking = true
 }
 
 resource "volterra_http_loadbalancer" "lb" {
