@@ -9,12 +9,12 @@ resource "volterra_origin_pool" "op" {
         dns_name = var.origin_fqdn
     }
   }
-  port               = 443
+  port = 443
   use_tls {
-      tls_config {
-          default_security = true
-      }
-      no_mtls = true
+    tls_config {
+        default_security = true
+    }
+    no_mtls = true
   }
 }
 
