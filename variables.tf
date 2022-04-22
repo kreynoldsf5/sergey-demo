@@ -10,7 +10,7 @@ variable "api_url" {
 }
 
 variable "api_p12_file" {
-    default = "svc_creds.p12"
+    default = "svc_cred.p12"
 }
 
 variable "origin_fqdn" {
