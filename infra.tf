@@ -22,7 +22,7 @@ resource "volterra_origin_pool" "op" {
 
 resource "volterra_app_firewall" "af" {
   name        = format("%s-app-firewall", var.base)
-  description = format("App Firewall in blocking mode for %s", var.base)
+  description = format("App Firewall for %s", var.base)
   namespace   = var.ns
 
   allow_all_response_codes = true
@@ -30,7 +30,7 @@ resource "volterra_app_firewall" "af" {
   use_default_blocking_page = true
   default_bot_setting = true
   default_detection_settings = true
-  blocking = true
+  blocking = false
 }
 
 resource "volterra_http_loadbalancer" "lb" {
