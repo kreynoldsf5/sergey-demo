@@ -15,6 +15,8 @@ resource "volterra_origin_pool" "op" {
         default_security = true
     }
     no_mtls = true
+    skip_server_verification = true
+    use_host_header_as_sni = true
   }
 }
 
