@@ -14,6 +14,7 @@ resource "volterra_origin_pool" "op" {
       tls_config {
           default_security = true
       }
+      no_mtls = true
   }
 }
 
